@@ -25,4 +25,4 @@ def coords_save(request):
 
 			return HttpResponse(simplejson.dumps({'ok':True, 'msg':data}), mimetype='application/json')
 		else:
-			return HttpResponse(simplejson.dumps({'ok':False, 'msg': 'Debes llenar todos campos'}), mimetype='application/json')
+			return HttpResponse(simplejson.dumps({'ok':False, 'msg': 'Te faltan datos'}), mimetype='application/json')

@@ -27,8 +27,11 @@ $(function () {
 			zoom: 15,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		}
+
+		// Mapa
 		map = new google.maps.Map($('#mapa').get(0), mapSettings);
 
+		// Creacion de un marcador
 		var marker = new google.maps.Marker({
 			position: latlng,
 			map: map,
