@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Google y Django{%endblock %}
+{% block container %}
+	<div id="mapa" class="capas"></div>
+	<div id="datos" class="capas"> 
+		<div id="form">
+			<form action="/coords/save" method="post" id="coords_save">{% csrf_token %}
+				{{ form.as_p }}
+				<p>
+					<input type="submit" value="Guardo Ubicacion">
+				</p>
+			</form>
+		</div>
+		<div id="data">
+			{% for ubicacion in ubicaciones %}
+
+				<li>{{ ubicacion.nombre }} {{ ubicacion.user }} - hace {{ubicacion.fecha|timesince }}</li>
+
+			{% endfor %}
+
+		</div>
+	</div>
+
+{%endblock %}
+

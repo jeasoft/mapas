@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+    <title>{% block title %}{%endblock %}</title>
+    <link rel="stylesheet" type="text/css" href=" {{ STATIC_URL }}css/styles.css">
+</head>
+<body>
+    <div class="container">
+        {% block container %} {% endblock %}
+
+    </div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="{{ STATIC_URL }}js/scripts.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+
+</body>
+</html>
